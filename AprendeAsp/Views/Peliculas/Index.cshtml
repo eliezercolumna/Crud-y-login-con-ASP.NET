@@ -1,0 +1,37 @@
+﻿@model IEnumerable<AprendeAsp.Models.PeliculasModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table border="1" cellspacing="0">
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Autor</th>
+        <th>Actores</th>
+        <th>Año</th>
+        <th>Sipnosis</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.Nombre</td>
+        <td>@item.Autor</td>
+        <td>@item.Actores</td>
+        <td>@item.Año</td>
+        <td>@item.Sipnosis</td>
+        <td>
+            <a href="Peliculas/Edit/@item.Id">Editar</a>
+            <a href="Peliculas/Delete/@item.Id">Eliminar</a>
+        </td>
+    </tr>
+    }
+</table>
+<p>
+
+</p>
